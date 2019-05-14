@@ -33,17 +33,33 @@
   <div class="container home">
     <header class="intro">
       <img src="img/fun-bus.jpg" alt="bus in the sand">
-      <h2>Welcome To Fun Bus!</h2>
+      <h2 id = 'select'>Welcome To Fun Bus!</h2>
       <p>Traveling expedition modern, clean webdesign blogger clean website theme website modern. Design pretty design, travelblogger adventure WordPress wanderlust theme blogger website expedition theme travelblogger. Adventure fun traveler pretty design website expedition.</p>
+      <form action="/action_page.php">
+        <label for="">Last Visitor.  Select to Change:</label>
+        <input class="first-name" type="text" name="firstname" value="Franklin was here">
+        <p id = 'log'></p>
+        </form>
     </header>
     <section class="content-section">
       <div class="text-content">
         <h2>Let's Go!</h2>
         <p>Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple organized.</p> 
         <p>Expedition colorful design simple excursion blogger blogger design WordPress design, design organized website theme.</p>
+        <form action="#">
+          <label>Please Do Not Type Here:
+            <input class = "typed" type="text" name="noChanges" value="I warned you">
+          </label>
+        </form>
+        <div class="dropzone"> 
+          <div id="draggable" draggable="true" ondragstart="event.dataTransfer.setData('text/plain',null)"> 
+            Splash Zone 
+          </div> 
+        </div> 
+        <div class="dropzone"></div>
       </div>
       <div class="img-content">
-        <img src="img/adventure.jpg" alt="Let's go on an adventure!">
+        <img class = 'resized-img' src="img/adventure.jpg" alt="Let's go on an adventure!">
       </div>
     </section>
     <section class="content-section inverse-content">
@@ -54,12 +70,20 @@
         <h2>Adventure Awaits</h2>
         <p>Adventure webdesign pretty design design, excursion cute WordPress blogger design webdesign adventure. Pretty simple traveling fun WordPress wanderlust darn simple organized.</p> 
         <p>Expedition colorful design simple excursion blogger blogger design WordPress design, design organized website theme.</p>
+        <p>Resize the browser window to fire the <code>resize</code> event.</p>
+        <p>Window height: <span id="height"></span></p>
+        <p>Window width: <span id="width"></span></p>
       </div>
      
     </section>
     <section class="content-destination">
       <h2>Pick Your Destination</h2>
       <p>Expedition excursion design darn excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
+      <div class="controls">
+        <input class="xhr error" type="button" name="xhr" value="Click to load a new pic" />
+    </div>
+    
+    <textarea readonly class="event-log"></textarea>
       <img src="img/destination.jpg" alt="Second slide">
     </section>
     <section class="content-pick">
@@ -78,6 +102,14 @@
         <h4>Island Getaway</h4>
         <p>Expedition excursion design excursion fun, clean simple organized WordPress Travel colorful webdesign. Traveler blogger website design expedition clean excursion traveling.</p>
         <div class="btn">Sign Me Up!</div>
+      </div>
+      <div class="destination">
+        <h4>Create Your Own Account</h4>
+        <p>Sign up below.  Get on your email list for travel tips and potential deals!</p>
+        <form id="accountCreation">
+          <input type="text" placeholder="account name">
+          <input type="password" placeholder="password">
+        </form>
       </div>
     </section>
   </div><!-- container -->
